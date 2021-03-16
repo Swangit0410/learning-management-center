@@ -30,6 +30,11 @@ aside {
             display: inline-block;
             width: 45px;
             height: 45px;
+            display: flex;
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
         }
         p {
             color: #fff;
@@ -52,12 +57,26 @@ aside {
             a {
                 text-decoration: none;
                 color: #fff;
-                padding: .8em 2em;
+                padding: 0.8em .2em 0.8em 2em;
                 display: block;
                 svg {
                     margin-right: 10px;
                     position: relative;
                     top: 3px;
+                }
+            }
+            a.asst {
+                &:after {
+                    content: ' \25C0';
+                    margin-left: 20px;
+                    font-size: 10px;
+                }
+            }
+            &:hover a.asst {
+                &:after {
+                    content: ' \25BC';
+                    margin-left: 20px;
+                    font-size: 10px;
                 }
             }
             a.is-active{
@@ -66,6 +85,24 @@ aside {
             &:hover {
                 background:$primary;
             }
+            ul.dropdown {
+                display: none;
+                background: #292c35;
+                font-size: 13px;
+                -webkit-transition: 0.3s all ease;
+                -moz-transition: 0.3s all ease;
+                -ms-transition: 0.3s all ease;
+                -o-transition: 0.3s all ease;
+                transition: 0.3s all ease;
+                li {
+                    a {
+                        padding-left: 57px;
+                    }
+                }
+            }
+            &:hover ul.dropdown {
+                display: block;
+            } 
         }
     }
 }
@@ -149,6 +186,8 @@ nav {
     right: 0;
     margin-top: -31px; 
   }
+
+
 @media only screen and (max-width: 760px) {
     button.btn-toggle{
         position: fixed;
