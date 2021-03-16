@@ -1,0 +1,157 @@
+$bg-dash: #1d2027;
+$bg-dash-2: #292c35;
+$primary: #5086c6;
+aside {
+    background: $bg-dash;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom:0;
+    z-index: 1;
+    overflow-x: hidden;
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -ms-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s;
+    .sidebar-header {
+        text-align: center;
+        a img {
+            width: 150px;
+            margin: auto;
+        }
+    }
+    .side-user {
+        background: $bg-dash-2;
+        padding: .5em .7em;
+        .user-wrap {
+            background: #fff;
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+        }
+        p {
+            color: #fff;
+            font-weight: 300;
+            position: absolute;
+            margin-top: -39px;
+            margin-left: 56px;
+            line-height: 16px;
+            .user-name {
+                font-size: 14px;
+            }
+            .user-role {
+                font-size: 12px;
+            }
+        }
+    }
+    ul.list-unstyled {
+        font-size: 14px;
+        li {
+            a {
+                text-decoration: none;
+                color: #fff;
+                padding: .8em 2em;
+                display: block;
+                svg {
+                    margin-right: 10px;
+                    position: relative;
+                    top: 3px;
+                }
+            }
+            a.is-active{
+                background: $primary;
+            }
+            &:hover {
+                background:$primary;
+            }
+        }
+    }
+}
+#main {
+    -webkit-transition: margin-left 0.3s;
+    -moz-transition: margin-left 0.3s;
+    -ms-transition: margin-left 0.3s;
+    -o-transition: margin-left 0.3s;
+    transition: margin-left 0.3s;
+}
+button.btn-toggle {
+    border: 1px solid #fff;
+    background: #1d2027;
+    border-radius: 3px;
+    padding: .8em 0;
+    position: absolute;
+    margin-top: 92px;
+    margin-left: 195px;
+    z-index: 1;
+    -webkit-transition: margin-left 0.3s;
+    -moz-transition: margin-left 0.3s;
+    -ms-transition: margin-left 0.3s;
+    -o-transition: margin-left 0.3s;
+    transition: margin-left 0.3s;
+    cursor: pointer;
+}
+nav {
+    background: $primary;
+    color: #fff;
+    ul {
+        list-style: none;
+        text-align: right;
+        padding-right: 20px;
+        li {
+            display: inline-block;
+            a {
+                color: #fff;
+                text-decoration: none;
+                display: block;
+                font-size: 14px;
+                padding: 15px 8px;
+                svg {
+                    position: relative;
+                    top:3px
+                }
+                .badge {
+                    position: absolute;
+                    background: #d60606;
+                    font-size: 12px;
+                    padding: 3px;
+                    border-radius: 100%;
+                    margin-top: -6px;
+                    margin-left: -10px;
+                }
+            }
+            button {
+                background: none;
+                outline: none;
+                border:none;
+                margin-left: 10px;
+                cursor: pointer;
+                svg {
+                    position: relative;
+                    top:3px
+                }
+            }
+        }
+    }
+}
+.arrow{
+    display: block;
+}
+.arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    
+    border-right:10px solid #fff;
+    position: absolute;
+    right: 0;
+    margin-top: -31px; 
+  }
+@media only screen and (max-width: 760px) {
+    button.btn-toggle{
+        position: fixed;
+        margin-top: 86px;
+    }
+}

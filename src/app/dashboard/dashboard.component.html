@@ -1,0 +1,7 @@
+<app-sidebar [sideWidth]=Counter (widthChanged)="widthChangedHandler($event)"></app-sidebar>
+<div id="main" [ngStyle]="{
+    'margin-left': Counter == 200 ? '0' : '200px'
+}">
+    <h2>Collapsed Dashboard {{ Counter }}</h2>
+    <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+</div>
